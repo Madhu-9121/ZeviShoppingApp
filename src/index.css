@@ -23,4 +23,14 @@ body{
   color:var(--white-color);
   overflow-x: hidden;
   
-} 
+}
+.slick-prev:before,
+.slick-next:before
+{
+
+    color: black !important;
+
+}
+.productCard_title__Ralsj{
+  color: #121212 !important;
+}
