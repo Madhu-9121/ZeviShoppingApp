@@ -17,7 +17,7 @@ const generateFakeProductData = () => {
   const originalPrice = parseFloat(faker.finance.amount());
   const discountPercentage = faker.datatype.number({ min: 20, max: 30 });
   const discountAmount = (originalPrice * discountPercentage) / 100;
-  const discountedPrice = originalPrice - discountAmount;
+  const discountedPrice = Math.round(originalPrice - discountAmount);
 
   const image = faker.image.urlLoremFlickr({ category: 'fashion' })
 

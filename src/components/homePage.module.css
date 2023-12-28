@@ -5,6 +5,13 @@
     position: relative;
     height: 100vh;
     width: 100vw;
+    background-image:url('../assets/bgfirst.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+
+
   }
 .inputContainer{
     margin-top: 102px;
@@ -53,4 +60,9 @@
       font-size: 24px;
     }
   }
+@media (min-width: 700px) {
+  .main{
+    height: 65vw;
+  }
   
+}

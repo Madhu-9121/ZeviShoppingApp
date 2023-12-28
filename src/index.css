@@ -18,9 +18,9 @@ html,body{
 }
 body{
   font-family: 'Inter;',sans-serif  ;
-  background-color: #1D1D1D;
+  background-color: white;
   line-height: 1.5;
-  color:var(--white-color);
+  color:var(--black-color);
   overflow-x: hidden;
   
 }

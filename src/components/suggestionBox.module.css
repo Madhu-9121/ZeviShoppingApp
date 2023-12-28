@@ -4,7 +4,7 @@
 background: #FFF;
 box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.25);
 width: 1025px;
-height: 480px;
+height: 580px;
 flex-shrink: 0;
 padding: 40px;
 }
@@ -24,8 +24,36 @@ margin-bottom: 24px;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.popular{
+    margin-top: 6% ;
+    color: #000;
+font-family: sans-serif Inter;
+font-size: 21.972px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin-bottom: 24px;
+}
+.list{
+    color: #000;
+font-family:sans-serif ;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+list-style: none;
+padding: 0; 
 
+}
+.list li {
+    margin-bottom: 12px; 
+    cursor: pointer; 
+  }
 
+  
+.list li:hover {
+    color: #7d7d7d; 
+  }
 
 @media (max-width: 767px) {
     .productContainer {

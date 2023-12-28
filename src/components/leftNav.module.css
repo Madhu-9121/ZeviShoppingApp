@@ -1,0 +1,203 @@
+.header{
+    color: #000;
+font-family: sans-serif Inter;
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+/* margin-top: 150px; */
+}
+.parent{
+    position: fixed;
+    top: 80px;
+    padding: 40px;
+    width: 400px;
+}
+.filterCheckBox {
+    list-style: none;
+    padding: 0 0% 2% 0%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);;
+    margin-bottom: 10px;
+    /* overflow-y: scroll; */
+  }
+
+.sideBarInner{
+    /* padding: 2rem; */
+    max-height: 700px;
+    width: 250px;
+    margin-top: 20px;
+    
+
+}
+.sideBarInner h3 {
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+.checkBox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-transform: capitalize;
+  }
+  
+.checkBox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    /* background-color: rgb(217, 217, 217); */
+    border-radius: 2px;
+border: 1px solid #000;
+  }
+
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  .checkBox input:checked ~ .checkmark {
+    background-color: rgb(16, 18, 20);
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .checkBox input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .checkBox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+.innerHead{
+    color: var(--on-primary-secondary-bg-surface-high-importance, #2F3037);
+font-family: sans-serif Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.name{
+    color: #000;
+font-family: sans-serif Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+text-transform: capitalize;
+}
+
+/* rating */
+.customRating {
+    display: flex;
+    font-size: 24px;
+    color: #888; /* Default star color */
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .star {
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .filled {
+    color: yellow; /* Filled star color */
+  }
+
+  .toggleButton {
+    display: none; /* Initially hide the button on larger screens */
+    cursor: pointer;
+    font-size: 24px;
+    color: #000;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    border: 0.2px solid black;
+  }
+
+  /* arrows oprating filters */
+  .sublist {
+    display: block;
+    margin-top: 5px;
+  }
+  
+  .sublistVisible {
+    display: block;
+  }
+  
+  .arrowDown {
+    margin-left: 5px;
+    cursor: pointer;
+    transform: rotate(360deg);
+  }
+
+.linealign{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+  /* Sidebar styling */
+  @media screen and (max-width: 768px) {
+    .header{
+        font-size: 30px;
+        margin-left: 10px;
+
+    }
+  
+    .toggleButton {
+      display: block; 
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+  
+    .parent {
+        top: 160px;
+      /* display: none;  */
+      
+    }
+  
+    .sideBarInner {
+      /* Your existing styles for larger screens */
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .sideBarInner {
+      display: none;
+    }
+  
+    .showSidebar .sideBarInner {
+      display: block;
+    }
+  }
+  

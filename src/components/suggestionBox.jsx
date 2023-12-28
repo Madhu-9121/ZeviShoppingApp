@@ -5,7 +5,7 @@ import ProductCard from './productCard.jsx'
 import styles from './suggestionBox.module.css'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-const SuggestionBox = () => {
+const SuggestionBox = ({setClickedSearch}) => {
   const [trendingData, setTrendingData] = useState([]);
     useEffect(()=>{
       const shuffledData = sampleData.sort(() => 0.5 - Math.random());
@@ -27,22 +27,34 @@ const SuggestionBox = () => {
         },
       ],
     };
+    const handleClick=()=>{
+      setClickedSearch(true)
+    }
   return (
     <div className={styles.parent}>
       <p className={styles.latestTrend}>Latest Trends </p>
       <div className={styles.productContainer}>
         {/* Display 5 ProductCards in large displays */}
         {trendingData.map((item, index) => (
-          <ProductCard key={index} image={item.image} name={item.name} />
+          <ProductCard setClickedSearch={setClickedSearch} key={index} image={item.image} name={item.name} />
         ))}
       </div>
 
       {/* Display the carousel for medium and small screens */}
       <Slider className={styles.slickSlider} {...slickSettings}>
         {trendingData.map((item, index) => (
-          <ProductCard key={index} image={item.image} name={item.name} />
+          <ProductCard setClickedSearch={setClickedSearch} key={index} image={item.image} name={item.name} />
         ))}
       </Slider>
+
+      <p className={styles.popular}>Popular suggestions</p>
+      <ul className={styles.list}>
+        <li onClick={handleClick}>Striped shirt dress</li>
+        <li onClick={handleClick}>Satin shirts</li>
+        <li onClick={handleClick}>Denim jumpsuit</li>
+        <li onClick={handleClick}>Leather dresses</li>
+        <li onClick={handleClick}>Solid tshirts</li>
+      </ul>
 
       
       
