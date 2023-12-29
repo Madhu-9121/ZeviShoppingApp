@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="App">
-      {clickedSearch ?  <Products setSearchName={setSearchName}/>: <HomePage search={searchName} setSearchName={setSearchName} setClickedSearch = {setClickedSearch}/> }
+      {clickedSearch ?  <Products searchName={searchName}/>: <HomePage search={searchName} setSearchName={setSearchName} setClickedSearch = {setClickedSearch}/> }
     </div>
   );
 }

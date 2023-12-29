@@ -4,9 +4,8 @@ import styles from './leftNav.module.css';
 import { brand, priceRange } from './dataForsidebar';
 import arrow from '../assets/arrow.svg';
 
-const LeftNav = ({ setShowSidebar, showSidebar }) => {
-  const sidenavGender = () => {};
-  const sideNavBrand = () => {};
+const LeftNav = ({ setShowSidebar, showSidebar,sidenavPrice,sidenavBrand }) => {
+  
   const [rating, setRating] = useState(null);
 
   const handleRatingChange = (value) => {
@@ -48,7 +47,7 @@ const LeftNav = ({ setShowSidebar, showSidebar }) => {
                 <input
                   type="checkbox"
                   value={brand.label}
-                  onChange={sideNavBrand}
+                  onChange={sidenavBrand}
                   className={styles.name}
                 />
                 <span className={styles.checkmark}></span>
@@ -71,7 +70,7 @@ const LeftNav = ({ setShowSidebar, showSidebar }) => {
                 <input
                   type="checkbox"
                   value={price.label}
-                  onChange={sidenavGender}
+                  onChange={sidenavPrice}
                   className={styles.name}
                 />
                 <span className={styles.checkmark}></span>
