@@ -19,7 +19,9 @@ const LeftNav = ({ setShowSidebar, showSidebar,sidenavPrice,sidenavBrand }) => {
   const toggleSublist = (e) => {
     const target = e.currentTarget;
     const sublist = target.nextElementSibling;
-    sublist.classList.toggle(styles.sublistVisible);
+    if (sublist) {
+        sublist.classList.toggle(styles.sublistVisible);
+      }
   };
 
   return (
